@@ -8,7 +8,6 @@ import { AccountService } from '../services/account.service';
 })
 export class RegisterComponent implements OnInit {
 
-  // @Input() usersFromHomeComponent: any;
   @Output() cancelRegister = new EventEmitter();
 
   model: any = {};
@@ -24,11 +23,9 @@ export class RegisterComponent implements OnInit {
     }, error => {
       console.log(error);
     })
-    // console.log(this.model);
   }
 
   cancel() {
-    // console.log('cancelled');
     this.cancelRegister.emit(false);
   }
 }
